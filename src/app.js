@@ -14,7 +14,7 @@ for (const file of commandFiles) {
   client.commands.set(command.name, command);
 }
 
-client.on(appEvents.error), (error) => appHandlers.handleError(error);
+client.on(appEvents.error, (error) => appHandlers.handleError(error));
 client.on(appEvents.guildCreate, (guild) => appHandlers.handleGuildCreate(guild));
 client.on(appEvents.guildDelete, (guild) => appHandlers.handleGuildDelete(guild));
 client.on(appEvents.guildMemberAdd, (member) => appHandlers.handleGuildMemberAdd(member));
