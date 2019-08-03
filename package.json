@@ -1,0 +1,50 @@
+{
+  "name": "create-discord-bot",
+  "version": "0.0.1",
+  "description": "A scaffold for creating Discord bots using Discord.js.",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "dev": "nodemon",
+    "start": "node ./src/app.js",
+    "debug": "node ./src/app.js --debug",
+    "eslint:errors-only": "npx eslint src --quiet"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint:errors-only",
+      "pre-push": "npm run eslint:errors-only"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moonstar-x/create-discord-bot.git"
+  },
+  "keywords": [
+    "discord",
+    "discord.js",
+    "create-discord-bot"
+  ],
+  "author": "moonstar-x",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moonstar-x/create-discord-bot/issues"
+  },
+  "homepage": "https://github.com/moonstar-x/create-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "github:discordjs/discord.js",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^3.0.2",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "sinon": "^7.3.2"
+  }
+}
